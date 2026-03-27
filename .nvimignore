@@ -1,0 +1,9 @@
+.git
+.tmp
+.zig-cache
+bin
+build
+out
+zig-out
+zig-pkg
+

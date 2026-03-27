@@ -1,0 +1,27 @@
+##
+## directory
+##
+.tmp
+.zig-cache
+bin
+build
+out
+zig-out
+zig-pkg
+
+##
+## extension
+##
+*.bak
+*.bak.*
+*.exe
+*.o
+
+##
+## file: include
+##
+
+##
+## file: exclude
+##
+
