@@ -20,6 +20,7 @@ zig-pkg
 ##
 ## file: include
 ##
+test_common.*
 
 ##
 ## file: exclude
