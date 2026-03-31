@@ -7,6 +7,7 @@ pub const Data = struct {
     num: i32,
 };
 
+/// I'm dangerous
 pub var pData: ?*Data = null;
 pub const allocator = std.heap.smp_allocator;
 
