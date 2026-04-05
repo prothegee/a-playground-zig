@@ -2,9 +2,7 @@ const std = @import("std");
 
 pub fn main(init: std.process.Init) !void {
     const cwd = std.Io.Dir.cwd();
-    const file = try cwd.openFile(
-        init.io, "foo.bak.txt", .{ .mode = .read_only }
-    );
+    const file = try cwd.openFile(init.io, "foo.bak.txt", .{ .mode = .read_only });
     defer file.close(init.io);
 
     var read_buffer: [1024]u8 = undefined;

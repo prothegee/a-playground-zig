@@ -4,9 +4,7 @@ pub fn main(init: std.process.Init) !void {
     const cwd = std.Io.Dir.cwd();
     const file = try cwd.createFile(init.io, "foo.bak.txt", .{ .read = true });
     defer file.close(init.io);
-    _ = try file.writePositionalAll(
-        init.io, "File from:\nfoo.bak.txt", 0
-    );
+    _ = try file.writePositionalAll(init.io, "File from:\nfoo.bak.txt", 0);
 
     var buffer: [300]u8 = undefined;
     @memset(buffer[0..], 0);

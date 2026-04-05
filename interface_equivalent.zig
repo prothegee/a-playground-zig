@@ -7,9 +7,15 @@ const Data = struct {
     y: i32,
     z: i32,
 
-    pub fn getX(self: *const Data) i32 { return self.x; } // Comment here to make the fail
-    pub fn getY(self: *const Data) i32 { return self.y; }
-    pub fn getZ(self: *const Data) i32 { return self.z; }
+    pub fn getX(self: *const Data) i32 {
+        return self.x;
+    } // Comment here to make the fail
+    pub fn getY(self: *const Data) i32 {
+        return self.y;
+    }
+    pub fn getZ(self: *const Data) i32 {
+        return self.z;
+    }
 };
 
 fn processData(obj_ptr: anytype) !void {
