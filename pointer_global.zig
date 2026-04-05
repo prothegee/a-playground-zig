@@ -2,12 +2,7 @@ const std = @import("std");
 
 const g = @import("a_global_data.zig");
 
-const Mode = enum(u8) {
-    UNWRAP_ONCE_USE_EVERYWHERE,
-    MOVE_THE_OWNER,
-    WHAT_THE_HELL,
-    _
-};
+const Mode = enum(u8) { UNWRAP_ONCE_USE_EVERYWHERE, MOVE_THE_OWNER, WHAT_THE_HELL, _ };
 
 fn unwrapOnceUseEverywhere() !u8 {
     g.pData = try g.newData();
@@ -24,7 +19,7 @@ fn unwrapOnceUseEverywhere() !u8 {
     g.pData.?.num = 0;
     std.debug.print("v: {d}\n", .{g.pData.?.num});
 
-    const nums = [_]i32 {1,2,3,4,5};
+    const nums = [_]i32{ 1, 2, 3, 4, 5 };
     for (nums) |n| {
         g.pData.?.num = n;
         std.debug.print("v: {d}\n", .{g.pData.?.num});
@@ -53,7 +48,7 @@ fn storeAndUse() !u8 {
     pData.num = 0;
     std.debug.print("v: {d}\n", .{pData.num});
 
-    const nums = [_]i32 {1,2,3,4,5};
+    const nums = [_]i32{ 1, 2, 3, 4, 5 };
     for (nums) |n| {
         pData.num = n;
         std.debug.print("v: {d}\n", .{pData.num});
@@ -74,7 +69,6 @@ pub fn main() !u8 {
     return switch (mode) {
         .UNWRAP_ONCE_USE_EVERYWHERE => try unwrapOnceUseEverywhere(),
         .MOVE_THE_OWNER => try storeAndUse(),
-        else => try notImplemented()
+        else => try notImplemented(),
     };
 }
-

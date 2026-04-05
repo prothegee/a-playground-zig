@@ -24,7 +24,7 @@ const ErrorBool = error{
 
 // we're looking 0
 // only true when i is 0
-fn errHandlerBool(i:i32) ErrorBool!bool {
+fn errHandlerBool(i: i32) ErrorBool!bool {
     if (i < 0) {
         return ErrorBool.ERROR_LEFT;
     }

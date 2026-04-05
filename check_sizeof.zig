@@ -8,7 +8,9 @@ const Struct1 = struct {
 const Struct2 = struct {
     // nothing here
 
-    pub fn getZero() i32 { return 0; }
+    pub fn getZero() i32 {
+        return 0;
+    }
 };
 
 const Efoo = enum {

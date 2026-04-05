@@ -1,19 +1,19 @@
 const std = @import("std");
 
 const template1 =
-\\This is template one
+    \\This is template one
 ;
 
 const template2 =
-\\This is template two
-\\
-\\with some empty line!
+    \\This is template two
+    \\
+    \\with some empty line!
 ;
 
 const template3 =
-"This is template three\r\n" ++
-"\r\n" ++
-"with some empty line too!";
+    "This is template three\r\n" ++
+    "\r\n" ++
+    "with some empty line too!";
 
 fn modifyStringByContent1(buffers: *std.ArrayList(u8), allocator: std.mem.Allocator) !void {
     buffers.clearAndFree(allocator);
@@ -55,5 +55,4 @@ pub fn main() !void {
 
     try modifyStringByContent3(&dstr, allocator);
     std.debug.print("dstr: {s}\n", .{dstr.items});
-
 }
