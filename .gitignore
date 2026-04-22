@@ -20,7 +20,9 @@ zig-pkg
 ##
 ## file: include
 ##
-test_common.*
+/common_test
+/common_test.*
+/time_*
 
 ##
 ## file: exclude
