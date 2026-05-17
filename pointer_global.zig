@@ -59,12 +59,12 @@ fn storeAndUse() !u8 {
 }
 
 fn notImplemented() !u8 {
-    std.debug.print("Error: not implemented\n", .{});
+    std.debug.print("Hey: not implemented\n", .{});
     return 1;
 }
 
 pub fn main() !u8 {
-    const mode = Mode.UNWRAP_ONCE_USE_EVERYWHERE;
+    const mode = Mode.WHAT_THE_HELL;
 
     return switch (mode) {
         .UNWRAP_ONCE_USE_EVERYWHERE => try unwrapOnceUseEverywhere(),
